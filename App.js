@@ -6,7 +6,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" hidden={false} />
-      <WebView source={{ uri: "https://example.com" }} style={styles.webview} />
+      <WebView
+        source={{ uri: "file:///android_asset/demo/index.html" }}
+        style={styles.webview}
+        originWhitelist={["*"]}
+        allowFileAccess={true}
+      />
     </View>
   );
 }
